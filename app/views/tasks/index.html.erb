@@ -1,5 +1,8 @@
+# app/views/tasks/index.html.erb
+
 <h1>All Tasks</h1>
 
 <% @tasks.each do |task|%>
-  <h3><%= task%></h3>
+  <h3><a href="/tasks/<%= task.id %>"><%= task.title %></h3>
+  <p><%= task.description %></p>
 <% end %>
